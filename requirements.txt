@@ -27,7 +27,6 @@ executing==2.2.0
 fastjsonschema==2.21.1
 filelock==3.18.0
 Flask==3.1.1
-flatbuffers==25.2.10
 fonttools==4.58.0
 fqdn==1.5.1
 fsspec==2025.5.1
@@ -67,7 +66,6 @@ jupyterlab_server==2.27.3
 jupyterlab_widgets==3.0.15
 keras==3.10.0
 kiwisolver==1.4.7
-libclang==18.1.1
 Markdown==3.8
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
@@ -88,7 +86,6 @@ notebook_shim==0.2.4
 numpy==2.0.2
 opencv-python==4.11.0.86
 opt_einsum==3.4.0
-optree==0.15.0
 overrides==7.7.0
 packaging==25.0
 pandas==2.3.1
@@ -108,7 +105,6 @@ pyparsing==3.2.3
 python-dateutil==2.9.0.post0
 python-json-logger==3.3.0
 pytz==2025.2
-pywinpty==2.0.15
 PyYAML==6.0.2
 pyzmq==26.4.0
 referencing==0.36.2
