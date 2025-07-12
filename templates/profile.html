@@ -1,0 +1,10 @@
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {{ form.location.label }} {{ form.location() }}<br>
+    {{ form.skills_offered.label }} {{ form.skills_offered() }}<br>
+    {{ form.skills_wanted.label }} {{ form.skills_wanted() }}<br>
+    {{ form.availability.label }} {{ form.availability() }}<br>
+    {{ form.is_private() }} {{ form.is_private.label }}<br>
+    <label>Upload Photo:</label><input type="file" name="photo"><br>
+    {{ form.submit() }}
+</form>

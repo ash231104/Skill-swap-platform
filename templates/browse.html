@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Browse Skills</h2>
+<form method="GET">
+  <input type="text" name="query" placeholder="Search skills">
+  <input type="submit" value="Search">
+</form>
+<ul>
+{% for user in users %}
+  <li>{{ user.name }} - Skills: {{ user.skills_offered }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

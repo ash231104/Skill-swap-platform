@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Your Swap Requests</h2>
+<ul>
+{% for request in swap_requests %}
+  <li>{{ request.skill }} with {{ request.partner_name }} - {{ request.status }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

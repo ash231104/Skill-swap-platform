@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Welcome, {{ current_user.name }}</h2>
+<p>Your Email: {{ current_user.email }}</p>
+<p><a href="{{ url_for('user_routes.profile') }}">Edit Profile</a></p>
+<p><a href="{{ url_for('swap_routes.view_swaps') }}">View Swap Requests</a></p>
+<p><a href="{{ url_for('user_routes.logout') }}">Logout</a></p>
+{% endblock %}

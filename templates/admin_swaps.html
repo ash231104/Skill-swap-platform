@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Manage Swaps{% endblock %}
+{% block content %}
+<h2 class="mb-4">Swap Requests Overview</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Sender</th>
+      <th>Receiver</th>
+      <th>Skill</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for swap in swaps %}
+    <tr>
+      <td>{{ swap.sender.name }}</td>
+      <td>{{ swap.receiver.name }}</td>
+      <td>{{ swap.skill }}</td>
+      <td>{{ swap.status }}</td>
+      <td>
+        <form method="POST" action="{{ url_for('admin_routes.reject_swap', swap_id=swap.id) }}" style="display:inline-block;">
+          <button class="btn btn-warning btn-sm" onclick="return confirm('Reject this swap request?')">Reject</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
