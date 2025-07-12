@@ -28,6 +28,10 @@ app.register_blueprint(user_routes)
 app.register_blueprint(swap_routes)
 app.register_blueprint(admin_routes)
 
+@app.route('/')
+def home():
+    return "<h1>Welcome to Skill Swap Platform</h1><p>Please <a href='/login'>log in</a> or <a href='/register'>register</a>.</p>"
+
 # Run
 if __name__ == '__main__':
     import os
