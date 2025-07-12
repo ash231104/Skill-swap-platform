@@ -31,7 +31,7 @@ class AdminLog(db.Model):
     action = db.Column(db.String(200))
     timestamp = db.Column(db.DateTime, default=db.func.current_timestamp())
 
---- forms/forms.py --- # type: ignore
+#--- forms/forms.py --- # type: ignore
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField, SelectField
 from wtforms.validators import DataRequired, Email, EqualTo, Length
