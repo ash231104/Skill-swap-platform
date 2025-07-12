@@ -15,7 +15,6 @@ db.init_app(app)
 login_manager = LoginManager()
 login_manager.login_view = 'user_routes.login'
 login_manager.init_app(app)
-
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -31,4 +30,6 @@ app.register_blueprint(admin_routes)
 
 # Run
 if __name__ == '__main__':
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
